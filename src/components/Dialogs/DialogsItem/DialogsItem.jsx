@@ -10,7 +10,7 @@ let DialogsItem =(props) => {
         <img src="images/users/user-10.jpg" alt="" className="profile-photo-sm pull-left" />
         <div className="msg-preview">
           <h6>{props.name}</h6>
-          <p className="text-muted">{props.lastMessage}</p>
+          <p className="text-muted">{props.message}</p>
           <small className="text-muted">{props.time}</small>
           <div className="seen"><i className="icon ion-checkmark-round"></i></div>
           {/* <div className="replied"><i className="icon ion-reply"></i></div>
