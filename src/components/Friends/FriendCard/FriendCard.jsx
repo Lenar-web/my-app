@@ -9,9 +9,9 @@ return (
         <div className="card-info">
           <img src="images/users/user-5.jpg" alt="user" className="profile-photo-lg" />
           <div className="friend-info">
-            <a href="#c" className="pull-right text-green">My Friend</a>
+            <a href="#c" className="pull-right text-green">Мой друг</a>
             <h5><a href="timeline.html" className="profile-link">{props.name}</a></h5>
-            <p>Traveler</p>
+            <p>{props.status}</p>
           </div>
         </div>
       </div>
