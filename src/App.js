@@ -8,7 +8,6 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import LeftMenu from './components/LeftMenu/LeftMenu';
 import News from './components/News/News';
-import CreatePost from './components/CreatePost/CreatePost';
 import Dialogs from './components/Dialogs/Dialogs';
 import{BrowserRouter, Route} from 'react-router-dom'
 import People from './components/People/People';
@@ -16,9 +15,11 @@ import Friends from './components/Friends/Friends';
 import Images from './components/Images/Images';
 import Videos from './components/Videos/Videos';
 
-let App = () => {
+let App = (props) => {
+
   return (
     <BrowserRouter>
+
     <div>
       <Header />
       <div id="page-contents">
@@ -26,9 +27,8 @@ let App = () => {
     		<div className="row">
           <LeftMenu /> 
           <div className="col-md-9">
-          <CreatePost />
-          <Route path='/news' component={News} />
-          <Route path='/dialogs' component={Dialogs} />
+          <Route path='/news' render={ ()=> <News state={props.state.newsPage}/> }/>
+          <Route path='/dialogs' render={ ()=> <Dialogs state={props.state.dialogsPage}/> } />
           <Route path='/people' component={People}/> 	
           <Route path='/friends' component={Friends}/>
           <Route path='/images' component={Images}/>
