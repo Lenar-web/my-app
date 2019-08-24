@@ -30,7 +30,7 @@ let App = (props) => {
           <Route path='/news' render={ ()=> <News state={props.state.newsPage}/> }/>
           <Route path='/dialogs' render={ ()=> <Dialogs state={props.state.dialogsPage}/> } />
           <Route path='/people' component={People}/> 	
-          <Route path='/friends' component={Friends}/>
+          <Route path='/friends' render={ ()=> <Friends state={props.state.friendsData} /> }/>
           <Route path='/images' component={Images}/>
           <Route path='/videos' component={Videos}/> 	 		
           </div>
