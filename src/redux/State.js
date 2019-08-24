@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "./../render";
+
 let state = {
   dialogsPage: {
     dialogsData: [
@@ -19,9 +21,9 @@ let state = {
   },
   newsPage: {
     postData: [
-      {author: "Ленар Евстафьев", text: "Всем привет", like:"10", dislike:"0"},
-      {author: "Ленар Евстафьев", text: "Как дела?", like:"100", dislike:"14"},
-      {author: "Ленар Евстафьев", text: "Сегодня прекрасный день", like:"34", dislike:"0"},
+      {author: "Ленар Евстафьев", text: "Всем привет", like: 10, dislike: 0, id: 1},
+      {author: "Ленар Евстафьев", text: "Как дела?", like: 100, dislike: 14, id: 2},
+      {author: "Ленар Евстафьев", text: "Сегодня прекрасный день", like: 34, dislike: 0, id: 3},
     ]
   },
   friendsData: [
@@ -35,6 +37,18 @@ let state = {
     {name: "Джеймс Картер", status: "Сео специалист"},
     {name: "Алексис Кларк", status: "Путешественник"},
   ]
+}
+
+export let addPost = (postMessage) => {
+  let newPost = {
+    author: "Ленар Евстафьев",
+    text: postMessage,
+    like: 0,
+    dislike: 0,
+    id: 4
+  }
+state.newsPage.postData.push(newPost);
+rerenderEntireTree(state);
 }
 
 export default state;
