@@ -61,7 +61,7 @@ return (
                     </div>
                     <div className="post-comment">
                       <img src="images/users/user-1.jpg" alt="" className="profile-photo-sm" />
-                      {/* <input type="text" className="form-control" placeholder="Post a comment"> */}
+                      <input type="text" className="form-control" placeholder="Post a comment" />
                     </div>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ return (
                     </div>
                     <div className="post-comment">
                       <img src="images/users/user-1.jpg" alt="" className="profile-photo-sm" />
-                      {/* <input type="text" className="form-control" placeholder="Post a comment"> */}
+                      <input type="text" className="form-control" placeholder="Post a comment" />
                     </div>
                   </div>
                 </div>
@@ -193,7 +193,7 @@ return (
                     </div>
                     <div className="post-comment">
                       <img src="images/users/user-1.jpg" alt="" className="profile-photo-sm" />
-                      {/* <input type="text" className="form-control" placeholder="Post a comment"> */}
+                      <input type="text" className="form-control" placeholder="Post a comment" />
                     </div>
                   </div>
                 </div>
@@ -259,7 +259,7 @@ return (
                     </div>
                     <div className="post-comment">
                       <img src="images/users/user-1.jpg" alt="" className="profile-photo-sm" />
-                      {/* <input type="text" className="form-control" placeholder="Post a comment"> */}
+                      <input type="text" className="form-control" placeholder="Post a comment" />
                     </div>
                   </div>
                 </div>
@@ -325,7 +325,7 @@ return (
                     </div>
                     <div className="post-comment">
                       <img src="images/users/user-1.jpg" alt="" className="profile-photo-sm" />
-                      {/* <input type="text" className="form-control" placeholder="Post a comment"> */}
+                      <input type="text" className="form-control" placeholder="Post a comment" />
                     </div>
                   </div>
                 </div>
@@ -391,7 +391,7 @@ return (
                     </div>
                     <div className="post-comment">
                       <img src="images/users/user-1.jpg" alt="" className="profile-photo-sm" />
-                      {/* <input type="text" className="form-control" placeholder="Post a comment"> */}
+                      <input type="text" className="form-control" placeholder="Post a comment" />
                     </div>
                   </div>
                 </div>
@@ -457,7 +457,7 @@ return (
                     </div>
                     <div className="post-comment">
                       <img src="images/users/user-1.jpg" alt="" className="profile-photo-sm" />
-                      {/* <input type="text" className="form-control" placeholder="Post a comment"> */}
+                      <input type="text" className="form-control" placeholder="Post a comment" />
                     </div>
                   </div>
                 </div>

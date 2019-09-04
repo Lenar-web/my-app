@@ -63,7 +63,7 @@ let Header = () => {
             <form className="navbar-form navbar-right hidden-sm">
               <div className="form-group">
                 <i className="icon ion-android-search"></i>
-
+                <input type="text" class="form-control" placeholder="Search friends, photos, videos" />
               </div>
             </form>
           </div>

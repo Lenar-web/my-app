@@ -71,8 +71,7 @@ return (
 
         <div className="send-message">
           <div className="input-group">
-            {/* <input type="text" className="form-control" placeholder="Type your message"> */}
-            <textarea className="form-control" placeholder="Type your message" name="" id="" cols="10" rows="3"></textarea>
+            <input type="search" className="form-control" placeholder="Type your message" />
             <span className="input-group-btn">
               <button className="btn btn-default" type="button">Отправить</button>
             </span>
