@@ -7,7 +7,7 @@ let newsList = props.state.postData.map(n=> <Post author={n.author}  text={n.tex
 
   return (		
       <div>
-        <CreatePost newPostText={props.state.newPostText} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>
+        <CreatePost newPostText={props.state.newPostText} dispatch={props.dispatch}/>
             {newsList}
       </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import DialogsItem from './DialogsItem/DialogsItem';
 import Message from './Message/Message';
-
+import {updateNewMessageTextActionCreator, AddMessageActionCreator} from './../../redux/State'
 
 
 
@@ -14,6 +14,17 @@ const Dialogs = (props) => {
   let dialog = props.state.dialogsData.map(d => <DialogsItem name={d.name} message={d.message} id={d.id} time={d.time}/>);
   let message = props.state.messagesData.map(m => <Message name={m.name} message={m.message} id={m.id} time={m.time} position={m.position} />);
 
+  let AddMessage = () => {
+    props.dispatch(AddMessageActionCreator());
+  }
+
+  let newMessageElement = React.createRef();
+
+  let onMessageChange = () => {
+    let text = newMessageElement.current.value;
+    // props.updateNewPostText(text)
+    props.dispatch(updateNewMessageTextActionCreator(text))
+  }
 
 return (
   <div className="chat-room">
@@ -71,9 +82,9 @@ return (
 
         <div className="send-message">
           <div className="input-group">
-            <input type="search" className="form-control" placeholder="Type your message" />
+            <input type="search" className="form-control" placeholder="Type your message" ref={newMessageElement}onChange={onMessageChange} value={props.state.newMessageText}/>
             <span className="input-group-btn">
-              <button className="btn btn-default" type="button">Отправить</button>
+              <button className="btn btn-default" onClick={AddMessage} type="button">Отправить</button>
             </span>
           </div>
         </div>
