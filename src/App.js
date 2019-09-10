@@ -16,8 +16,8 @@ import Images from './components/Images/Images';
 import Videos from './components/Videos/Videos';
 
 let App = (props) => {
-
   return (
+
     <div>
       <Header />
       <div id="page-contents">
