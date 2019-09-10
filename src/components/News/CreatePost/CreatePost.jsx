@@ -1,5 +1,5 @@
 import React from 'react';
-import {AddPostActionCreator,updateNewPostTextActionCreator} from './../../../redux/State'
+import {AddPostActionCreator,updateNewPostTextActionCreator} from './../../../redux/post-reducer'
 
 let CreatePost = (props) => {
 
