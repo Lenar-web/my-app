@@ -1,19 +1,13 @@
 import React from 'react';
 import News from './News';
-import StoreContext from '../../StoreContext';
+import {connect} from 'react-redux';
 
-
-let NewsContainer = (props) => {
-
-  return <StoreContext.Consumer>  
-  { (store) => {
-   let state = store.getState().newsPage;
-   
-   return <News posts={state.postData}/>
-     }
-    }
-  </StoreContext.Consumer>
-  
+let mapStateToProps = (state) => {
+  return {
+    posts: state.newsPage.postData
+  }
 }
+
+const NewsContainer = connect(mapStateToProps)(News);
 
 export default NewsContainer;
