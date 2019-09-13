@@ -27,8 +27,8 @@ let App = (props) => {
     		<div className="row">
           <LeftMenu /> 
           <div className="col-md-9">
-          <Route path='/news' render={ ()=> <NewsContainer store={props.store}/> }/>
-          <Route path='/dialogs' render={ ()=> <DialogsContainer store={props.store} /> } />
+          <Route path='/news' render={ ()=> <NewsContainer /> }/>
+          <Route path='/dialogs' render={ ()=> <DialogsContainer /> } />
           <Route path='/people' component={People}/> 	
           <Route path='/friends' render={ ()=> <Friends state={props.state.friendsData} /> }/>
           <Route path='/images' component={Images}/>
