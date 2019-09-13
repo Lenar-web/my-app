@@ -183,34 +183,39 @@ section img{
 	margin: auto;
 }
 
-img.profile-photo{
+a.profile-photo{
   height: 58px;
   width: 58px;
   border-radius: 50%;
+  overflow: hidden;
 }
 
-img.profile-photo-lg{
+a.profile-photo-lg{
   height: 80px;
   width: 80px;
   border-radius: 50%;
+  overflow: hidden;
 }
 
-img.profile-photo-md{
+a.profile-photo-md{
 	height: 50px;
 	width: 50px;
-	border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
-img.profile-photo-sm{
+a.profile-photo-sm{
 	height: 40px;
 	width: 40px;
-	border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
-img.profile-photo-xs{
+a.profile-photo-xs{
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .img-wrapper{
@@ -710,7 +715,7 @@ textarea{
   margin-bottom: 40px;
 }
 
-.profile-card img.profile-photo{
+.profile-card a.profile-photo{
   border: 7px solid #fff;
   float: left;
   margin-right: 20px;
@@ -719,8 +724,13 @@ textarea{
   height: 70px;
   width: 70px;
   border-radius: 50%;
+  overflow: hidden;
 }
 
+.profile-card img.profile-photo {
+  width: 100%;
+  height: auto;
+}
 /*Newsfeed Links CSS*/
 
 ul.nav-news-feed{
@@ -862,8 +872,12 @@ ul.online-users li span.online-dot{
 
 .create-post .form-group{
   margin-bottom: 0;
-  display: inline-flex;
+  display: flex;
   width: 100%;
+  justify-content: space-between;
+}
+.create-post .form-group .form-control {
+  width: 90%;
 }
 
 .create-post .form-group img.profile-photo-md{
@@ -908,6 +922,10 @@ ul.online-users li span.online-dot{
 }
 
 .post-content img.post-image, video.post-video, .google-maps{
+  width: 100%;
+  height: auto;
+}
+.post-content a>img {
   width: 100%;
   height: auto;
 }
@@ -1237,11 +1255,12 @@ ul.online-users li span.online-dot{
   z-index: 999;
 }
 
-.timeline-cover .timeline-nav-bar .profile-info img.profile-photo{
+.timeline-cover .timeline-nav-bar .profile-info a.profile-photo{
   height: 200px;
   width: 200px;
   border-radius: 50%;
   border: 10px solid #fff;
+  overflow: hidden;
 }
 
 .timeline-cover .timeline-nav-bar ul.profile-menu{
@@ -1291,12 +1310,13 @@ ul.online-users li span.online-dot{
   text-align: center;
 }
 
-.timeline-cover .navbar-mobile .profile-info img.profile-photo{
+.timeline-cover .navbar-mobile .profile-info a.profile-photo{
   border: 10px solid #fff;
   border-radius: 50%;
   height: 200px;
   margin: auto;
   width: 200px;
+  overflow: hidden;
 }
 
 .timeline-cover .navbar-mobile .mobile-menu ul{
@@ -1504,6 +1524,10 @@ ul.album-photos li img{
 
 .contact-us form.contact-form .form-group{
   position: relative
+}
+.form-group a>img {
+  width: 100%;
+  height: auto;
 }
 
 .contact-us form.contact-form .form-group i{

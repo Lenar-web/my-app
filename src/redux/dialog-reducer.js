@@ -17,7 +17,7 @@ let initialState = {
     {name: "Линда Лохан", message: "Что делаешь?", id: 5, time: "30 минут назад", position: 'left'},
     {name: "Ленар Евстафьев", message: "Работаю", id: 6, time: "Минуту назад", position: 'right'}
   ],
-  newMessageText: "",
+  newMessageText: "Привет! Как дела?",
 };
 
 const dialogReducer = (state = initialState, action) => {

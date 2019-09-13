@@ -7,7 +7,9 @@ let Post = (props) => {
     <div className="post-content">
     {/* <img src="images/post-images/1.jpg" alt="post-sdimage" className="img-responsive post-image" /> */}
     <div className="post-container">
-      <img src="https://sun9-32.userapi.com/c847217/v847217358/12ef68/SBEQOk1q8Eo.jpg" alt="user" className="profile-photo-md pull-left" />
+      <a href="#c" className="profile-photo-md pull-left" >
+      <img src="https://sun9-32.userapi.com/c847217/v847217358/12ef68/SBEQOk1q8Eo.jpg" alt="user" />
+      </a>
       <div className="post-detail">
         <div className="user-info">
           <h5><a href="timeline.html" className="profile-link">{props.author}</a> <span className="following">Подписаны</span></h5>

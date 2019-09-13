@@ -14,10 +14,12 @@ import People from './components/People/People';
 import Friends from './components/Friends/Friends';
 import Images from './components/Images/Images';
 import Videos from './components/Videos/Videos';
+import NewsContainer from './components/News/NewsContainer';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
+
 
 let App = (props) => {
   return (
-
     <div>
       <Header />
       <div id="page-contents">
@@ -25,8 +27,8 @@ let App = (props) => {
     		<div className="row">
           <LeftMenu /> 
           <div className="col-md-9">
-          <Route path='/news' render={ ()=> <News state={props.state.newsPage}  dispatch={props.dispatch}/> }/>
-          <Route path='/dialogs' render={ ()=> <Dialogs state={props.state.dialogsPage} dispatch={props.dispatch}/> } />
+          <Route path='/news' render={ ()=> <NewsContainer store={props.store}/> }/>
+          <Route path='/dialogs' render={ ()=> <DialogsContainer store={props.store} /> } />
           <Route path='/people' component={People}/> 	
           <Route path='/friends' render={ ()=> <Friends state={props.state.friendsData} /> }/>
           <Route path='/images' component={Images}/>

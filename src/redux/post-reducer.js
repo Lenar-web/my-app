@@ -7,7 +7,7 @@ let initialState = {
     {author: "Ленар Евстафьев", text: "Как дела?", like: 100, dislike: 14, id: 2},
     {author: "Ленар Евстафьев", text: "Сегодня прекрасный день", like: 34, dislike: 0, id: 3},
   ],
-  newPostText: "",
+  newPostText: "Привет! Как дела?",
   }
 const postReducer = (state = initialState, action) => {
   switch(action.type) {
