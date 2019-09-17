@@ -1,4 +1,17 @@
 import './index.css';
+import "./assets/css/bootstrap.min.css";
+import "./assets/css/style.css";
+import "./assets/css/ionicons.min.css";
+import "./assets/css/font-awesome.min.css";
+import "./assets/css/emoji.css";
+// import "./assets/js/jquery-3.1.1.min.js";
+// import "./assets/js/bootstrap.min.js";
+// import "./assets/js/masonry.pkgd.min.js";
+// import "./assets/js/jquery.sticky-kit.min.js";
+// import "./assets/js/jquery.scrollbar.min.js";
+// import "./assets/js/jquery.appear.min.js";
+// import "./assets/js/jquery.incremental-counter.js";
+// import "./assets/js/script.js";
 import store from "./redux/redux-store";
 import * as serviceWorker from './serviceWorker';
 import React from 'react';

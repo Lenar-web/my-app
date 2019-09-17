@@ -10,7 +10,7 @@ let LeftMenu = () => {
 
     <ul className="nav-news-feed">
       <li><i className="icon ion-ios-paper"></i><div><NavLink to="/news">Мои новости</NavLink></div></li>
-      <li><i className="icon ion-ios-people"></i><div><NavLink to="/people">Люди по близости</NavLink></div></li>
+      <li><i className="icon ion-ios-people"></i><div><NavLink to="/users">Люди</NavLink></div></li>
       <li><i className="icon ion-ios-people-outline"></i><div><NavLink to="/friends">Друзья</NavLink></div></li>
       <li><i className="icon ion-chatboxes"></i><div><NavLink to="/dialogs">Сообщения</NavLink></div></li>
       <li><i className="icon ion-images"></i><div><NavLink to="/images">Изображения</NavLink></div></li>

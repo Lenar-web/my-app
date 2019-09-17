@@ -178,7 +178,14 @@ section .wrapper{
 	background: #000;
   transition: all 1s;
 }
-
+.btn-more {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 30px;
+  padding: 10px 25px;
+  font-size: 18px;
+}
 section img{
 	margin: auto;
 }
@@ -188,6 +195,7 @@ a.profile-photo{
   width: 58px;
   border-radius: 50%;
   overflow: hidden;
+  display: block;
 }
 
 a.profile-photo-lg{
@@ -195,6 +203,7 @@ a.profile-photo-lg{
   width: 80px;
   border-radius: 50%;
   overflow: hidden;
+  display: block;
 }
 
 a.profile-photo-md{
@@ -202,6 +211,7 @@ a.profile-photo-md{
 	width: 50px;
   border-radius: 50%;
   overflow: hidden;
+  display: block;
 }
 
 a.profile-photo-sm{
@@ -209,6 +219,7 @@ a.profile-photo-sm{
 	width: 40px;
   border-radius: 50%;
   overflow: hidden;
+  display: block;
 }
 
 a.profile-photo-xs{
@@ -216,6 +227,7 @@ a.profile-photo-xs{
   width: 30px;
   border-radius: 50%;
   overflow: hidden;
+  display: block;
 }
 
 .img-wrapper{
@@ -725,6 +737,7 @@ textarea{
   width: 70px;
   border-radius: 50%;
   overflow: hidden;
+  display: block;
 }
 
 .profile-card img.profile-photo {
@@ -996,7 +1009,11 @@ ul.online-users li span.online-dot{
   border-bottom: 1px solid #f1f2f2;
   margin-bottom: 20px;
 }
-
+.nearby-user a>img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 /*==================================================
   Friend List CSS = Newsfeed and Timeline
@@ -1261,6 +1278,7 @@ ul.online-users li span.online-dot{
   border-radius: 50%;
   border: 10px solid #fff;
   overflow: hidden;
+  display: block;
 }
 
 .timeline-cover .timeline-nav-bar ul.profile-menu{
@@ -1317,6 +1335,7 @@ ul.online-users li span.online-dot{
   margin: auto;
   width: 200px;
   overflow: hidden;
+  display: block;
 }
 
 .timeline-cover .navbar-mobile .mobile-menu ul{
@@ -1952,4 +1971,29 @@ ul.contact li i{
   bottom: 0;
   background-color: #fff;
   z-index: 9999999;
+}
+.pagination {
+  display: flex;
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.pagination span{
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.pagination span.currentPage {
+  font-weight: bold;
+  background-color: #27aae1;
+  color: #fff;
+
 }
