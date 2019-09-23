@@ -1,4 +1,6 @@
 import React from 'react';
+import Preloader from '../Common/Preloader/Preloader';
+import {NavLink} from 'react-router-dom';
 
 const Users = (props) => {
 
@@ -17,15 +19,17 @@ return <div className="people-nearby">
   <div className="pagination">
     {totalPage}
   </div>
-    {props.users.map(u => <div className="nearby-user">
+  
+  {props.fetching ? <Preloader /> : null}
+    {!props.fetching && props.users.map(u => <div className="nearby-user">
       <div className="row">
         <div className="col-md-2 col-sm-2">
-          <a href="#c" className="profile-photo-lg">
+          <NavLink to={"/profile/" + u.id}className="profile-photo-lg">
           <img src={u.photos.large !== null ? u.photos.large : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1P9NIBPbZvN_8V2uZ8cVfm4Rnwwel8_UF_89HT238qUQAOZ1p'  }  alt="user" />
-          </a>
+          </NavLink>
         </div>
         <div className="col-md-7 col-sm-7">
-          <h5><a href="#c" className="profile-link">{u.name}</a></h5>
+          <h5><NavLink to={"/profile/" + u.id} className="profile-link">{u.name}</NavLink></h5>
           <p>{u.status}</p>
     
         </div>
@@ -38,7 +42,7 @@ return <div className="people-nearby">
       </div>
     </div>)
     }
-<button className="btn btn-primary btn-more">Показать еще</button>
+{/* <button className="btn btn-primary btn-more">Показать еще</button> */}
 </div>
 }
 

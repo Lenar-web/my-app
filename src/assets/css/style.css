@@ -229,6 +229,10 @@ a.profile-photo-xs{
   overflow: hidden;
   display: block;
 }
+.profile-photo img{
+  width: 100%;
+  height: auto;
+}
 
 .img-wrapper{
   position: relative;
@@ -1253,6 +1257,7 @@ ul.online-users li span.online-dot{
   min-height: 360px;
   border-radius: 0 0 4px 4px;
   position: relative;
+  margin-bottom: 100px;
 }
 
 /*Timeline Menu for Large Screens*/
@@ -1261,14 +1266,14 @@ ul.online-users li span.online-dot{
   background: rgba(0,0,0, .7);
   width: 100%;
   position: absolute;
-  bottom: 25px;
+  bottom: 50px;
 }
 
 .timeline-cover .timeline-nav-bar .profile-info{
   position: absolute;
   text-align: center;
   padding: 0 20px;
-  top: -100px;
+  top: -60px;
   z-index: 999;
 }
 
@@ -1309,8 +1314,7 @@ ul.online-users li span.online-dot{
 .timeline-cover .timeline-nav-bar ul.follow-me{
   margin: 0;
   position: absolute;
-  right: 15px;
-  top: 0;
+
 }
 
 .timeline-cover .timeline-nav-bar .follow-me li{
@@ -1407,17 +1411,6 @@ ul.online-users li span.online-dot{
 .timeline .post-content{
   position: relative;
   overflow: visible;
-}
-
-.timeline .post-content::before{
-  content: "";
-  position: absolute;
-  background: none;
-  width: 1px;
-  height: 98%;
-  left: -145px;
-  border-left: 2px solid #8dc63f;
-  top: 15px;
 }
 
 .timeline .post-content .post-date{
@@ -1996,4 +1989,14 @@ ul.contact li i{
   background-color: #27aae1;
   color: #fff;
 
+}
+.preloader {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.preloader img {
+  display: block;
+  width: 100%;
+  height: auto;
 }

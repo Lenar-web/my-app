@@ -10,6 +10,7 @@ import Videos from './components/Videos/Videos';
 import NewsContainer from './components/News/NewsContainer';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
+import ProfileContainer from './components/ProfilePage/ProfileContainer';
 
 
 
@@ -20,14 +21,17 @@ let App = (props) => {
       <div id="page-contents">
     	<div className="container">
     		<div className="row">
+
+        
           <LeftMenu /> 
           <div className="col-md-9">
-          <Route path='/news' render={ ()=> <NewsContainer /> }/>
+          <Route path='/profile/:userId?' render={ ()=> <ProfileContainer /> }/>
+          {/* <Route path='/news' render={ ()=> <NewsContainer /> }/> */}
           <Route path='/dialogs' render={ ()=> <DialogsContainer /> } />
           <Route path='/users' render={ ()=> <UsersContainer /> }/> 	
-          <Route path='/friends' render={ ()=> <Friends state={props.state.friendsData} /> }/>
+          {/* <Route path='/friends' render={ ()=> <Friends /> }/>
           <Route path='/images' component={Images}/>
-          <Route path='/videos' component={Videos}/> 	 		
+          <Route path='/videos' component={Videos}/> 	 		 */}
           </div>
     		</div>
     	</div>

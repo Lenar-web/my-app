@@ -9,6 +9,7 @@ let LeftMenu = () => {
     <Profile />
 
     <ul className="nav-news-feed">
+      <li><i className="icon ion-ios-contact"></i><div><NavLink to="/profile">Мой профиль</NavLink></div></li>
       <li><i className="icon ion-ios-paper"></i><div><NavLink to="/news">Мои новости</NavLink></div></li>
       <li><i className="icon ion-ios-people"></i><div><NavLink to="/users">Люди</NavLink></div></li>
       <li><i className="icon ion-ios-people-outline"></i><div><NavLink to="/friends">Друзья</NavLink></div></li>
