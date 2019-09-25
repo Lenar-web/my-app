@@ -1,7 +1,8 @@
 import React from 'react';
 import headerLogo from './../../assets/images/logo.png'
+import {NavLink} from 'react-router-dom';
 
-let Header = () => {
+let Header = (props) => {
   return (
 
       	<header id="header">
@@ -21,8 +22,7 @@ let Header = () => {
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav navbar-right main-menu">
-              <li className="dropdown"><a href="index.html">Главная</a></li>
-              <li className="dropdown"><a href="contact.html">Выход</a></li>
+              {props.isAuth ? <li className="dropdown"><NavLink to="/profile">{props.login}</NavLink></li> : <li className="dropdown"><NavLink to="/auth">Вход</NavLink></li>}
             </ul>
             <form className="navbar-form navbar-right hidden-sm">
               <div className="form-group">

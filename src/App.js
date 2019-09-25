@@ -1,23 +1,22 @@
 
 import React from 'react';
-import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import LeftMenu from './components/LeftMenu/LeftMenu';
 import{Route} from 'react-router-dom';
-import Friends from './components/Friends/Friends';
 import Images from './components/Images/Images';
 import Videos from './components/Videos/Videos';
-import NewsContainer from './components/News/NewsContainer';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/ProfilePage/ProfileContainer';
+import HeaderContainer from './components/Header/HeaderContainer';
+import FriendsContainer from './components/Friends/FriendsContainer';
 
 
 
 let App = (props) => {
   return (
     <div>
-      <Header />
+      <HeaderContainer />
       <div id="page-contents">
     	<div className="container">
     		<div className="row">
@@ -29,9 +28,9 @@ let App = (props) => {
           {/* <Route path='/news' render={ ()=> <NewsContainer /> }/> */}
           <Route path='/dialogs' render={ ()=> <DialogsContainer /> } />
           <Route path='/users' render={ ()=> <UsersContainer /> }/> 	
-          {/* <Route path='/friends' render={ ()=> <Friends /> }/>
+          <Route path='/friends' render={ ()=> <FriendsContainer /> }/>
           <Route path='/images' component={Images}/>
-          <Route path='/videos' component={Videos}/> 	 		 */}
+          <Route path='/videos' component={Videos}/> 
           </div>
     		</div>
     	</div>

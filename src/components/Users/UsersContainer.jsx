@@ -1,27 +1,17 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { follow, unfollow, setUsers, setCurrentPage, setUsersTotalCount, isFetching } from '../../redux/user-reducer';
-import * as axios from 'axios';
+import { follow, unfollow, getUsers, PageChanged } from '../../redux/user-reducer';
 import Users from './Users';
+
 
 
 class UsersAPIComponent extends React.Component {
 
   componentDidMount() {
-    this.props.isFetching(true);
-    axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
-        this.props.setUsers(response.data.items);
-        this.props.isFetching(false);
-        this.props.setUsersTotalCount(response.data.totalCount);
-      });
+    this.props.getUsers(this.props.currentPage,this.props.pageSize)
   }
   onPageChanged = (pageNumber) => {
-    this.props.setCurrentPage(pageNumber);
-    this.props.isFetching(true);
-    axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`).then(response => {
-        this.props.isFetching(false);
-        this.props.setUsers(response.data.items);
-      });
+    this.props.PageChanged(pageNumber, this.props.pageSize)
   }
   render() {
    return <> 
@@ -34,6 +24,7 @@ class UsersAPIComponent extends React.Component {
                   follow={this.props.follow}
                   unfollow={this.props.unfollow}
                   fetching={this.props.fetching}
+                  followingInProgress={this.props.followingInProgress}
                   />
                   </>
 }
@@ -44,8 +35,9 @@ let mapStateToProps = (state) => {
     pageSize: state.usersPage.pageSize,
     totalUserCount: state.usersPage.totalUserCount,
     currentPage: state.usersPage.currentPage,
-    fetching: state.usersPage.isFetching
+    fetching: state.usersPage.isFetching,
+    followingInProgress: state.usersPage.followingInProgress
   }
 }
 
-export default connect(mapStateToProps, { follow, unfollow, setUsers, setCurrentPage, setUsersTotalCount, isFetching })(UsersAPIComponent);
+export default connect(mapStateToProps, { follow, unfollow, getUsers, PageChanged })(UsersAPIComponent);

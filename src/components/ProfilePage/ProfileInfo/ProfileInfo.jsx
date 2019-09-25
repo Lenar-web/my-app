@@ -1,5 +1,6 @@
 import React from 'react';
 import Preloader from '../../Common/Preloader/Preloader';
+import {NavLink} from 'react-router-dom';
 
 let ProfileInfo = (props) => {
   
@@ -20,13 +21,13 @@ let ProfileInfo = (props) => {
             <img src={props.profile.photos.large !== null ? props.profile.photos.large : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1P9NIBPbZvN_8V2uZ8cVfm4Rnwwel8_UF_89HT238qUQAOZ1p'  }  alt="user" />
             </a>
             <h3>{props.profile.fullName}</h3>
-            <p className="text-muted">Разработка сайтов</p>
+            <p className="text-muted">{props.profile.status}</p>
           </div>
         </div>
         <div className="col-md-8">
           <ul className="list-inline profile-menu">
-            <li><a href="timeline.html" className="active">Стена</a></li>
-            <li><a href="timeline-about.html">Обо мне</a></li>
+            <li><a href="timeline.html">Стена</a></li>
+            <li><NavLink to={'/profile/'+ props.profile.userId +'/about'}>Обо мне</NavLink></li>
             <li><a href="timeline-album.html">Альбом</a></li>
             <li><a href="timeline-friends.html">Друзья</a></li>
           </ul>
