@@ -2,10 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { follow, unfollow, getUsers, PageChanged } from '../../redux/user-reducer';
 import Users from './Users';
+import { widthAuthRedirect } from '../../hoc/withAuthRedirect';
+import {compose} from 'redux';
 
-
-
-class UsersAPIComponent extends React.Component {
+class UsersContainer extends React.Component {
 
   componentDidMount() {
     this.props.getUsers(this.props.currentPage,this.props.pageSize)
@@ -40,4 +40,11 @@ let mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { follow, unfollow, getUsers, PageChanged })(UsersAPIComponent);
+
+
+export default compose(
+  connect(mapStateToProps, { follow, unfollow, getUsers, PageChanged }),
+  widthAuthRedirect
+
+)(UsersContainer);
+

@@ -23,7 +23,7 @@ return <div className="people-nearby">
   </div>
   
   {props.fetching ? <Preloader /> : null}
-    {!props.fetching && props.users.map(u => <div className="nearby-user">
+    {!props.fetching && props.users.map(u =><div className="nearby-user">
       <div className="row">
         <div className="col-md-2 col-sm-2">
           <NavLink to={"/profile/" + u.id}className="profile-photo-lg">
@@ -41,7 +41,8 @@ return <div className="people-nearby">
             onClick={()=>{props.unfollow(u.id)}} 
             className="btn btn-primary pull-right">Удалить из друзей</button> 
             : <button disabled={props.followingInProgress.some(id => id === u.id)} 
-            onClick={()=>{props.follow(u.id)}} 
+            onClick={()=>{props.follow(u.id)
+              debugger}} 
             className="btn btn-primary pull-right">Добавить в друзья</button>}
           
         </div>

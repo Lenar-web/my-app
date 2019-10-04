@@ -1,6 +1,7 @@
 import React from 'react';
 import DialogsItem from './DialogsItem/DialogsItem';
 import Message from './Message/Message';
+import MessageReduxForm from './MessageForm';
 
 
 const Dialogs = (props) => {
@@ -8,15 +9,8 @@ const Dialogs = (props) => {
 let messages = props.dialogsPage.messagesData.map( m => <Message position={m.position} id={m.id} name={m.name} date={m.date} message={m.message}  />)
 let dialogs = props.dialogsPage.dialogsData.map( d => <DialogsItem id={d.id} name={d.name} time={d.time} message={d.message}/>)
 
-let addMessage = () => {
-  props.onAddMessage()
-}
-
-let newTextElement = React.createRef();
-
-let updateNewMessageText = () => {
-  let body = newTextElement.current.value
-  props.onUpdateTextMessage(body)
+let addMessage = (value) => {
+  props.onAddMessage(value.newMessageText)
 }
 
 return (
@@ -74,12 +68,7 @@ return (
         </div>
 
         <div className="send-message">
-          <div className="input-group">
-            <input type="search" className="form-control" placeholder="Type your message" value={props.dialogsPage.newMessageText} onChange={updateNewMessageText} ref={newTextElement}/>
-            <span className="input-group-btn">
-              <button onClick={addMessage} className="btn btn-default" type="button">Отправить</button>
-            </span>
-          </div>
+          <MessageReduxForm onSubmit={addMessage}/>
         </div>
       </div>
       <div className="clearfix"></div>

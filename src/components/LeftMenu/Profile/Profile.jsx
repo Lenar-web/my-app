@@ -3,13 +3,17 @@ import {NavLink} from 'react-router-dom';
 
 let Profile = (props) => {
   return (
-
     <div className="profile-card">
-      <NavLink to="/profile" className="profile-photo">
-      <img src="https://sun9-32.userapi.com/c847217/v847217358/12ef68/SBEQOk1q8Eo.jpg" alt="user" className="profile-photo" />
+      {props.profile !== null && props.isAuth === true
+      ? <div>
+        <NavLink to="/profile" className="profile-photo">
+        <img src={props.profile.photos.large !== null ? props.profile.photos.large : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1P9NIBPbZvN_8V2uZ8cVfm4Rnwwel8_UF_89HT238qUQAOZ1p'  }  alt="user" className="profile-photo" />
       </NavLink>
-      <h5><NavLink to="/profile" className="text-white">Ленар Евстафьев</NavLink></h5>
-      <a href="#c" className="text-white"><i className="ion ion-android-person-add"></i> 1,299 подписчиков</a>
+      <h5><NavLink to="/profile" className="text-white">{props.profile.fullName || 'no status'}</NavLink></h5>
+        </div>
+       : <h3 className="dropdown text-white"><NavLink to="/login">Вход</NavLink></h3>
+      }
+      
     </div>
 
   );

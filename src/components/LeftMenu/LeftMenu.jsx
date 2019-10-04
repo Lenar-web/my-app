@@ -1,12 +1,12 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import Profile from './Profile/Profile';
+import ProfileContainer from './Profile/ProfileContainer';
 
 let LeftMenu = () => {
   return (
 
     <div className="col-md-3 static">
-    <Profile />
+    <ProfileContainer />
 
     <ul className="nav-news-feed">
       <li><i className="icon ion-ios-contact"></i><div><NavLink to="/profile">Мой профиль</NavLink></div></li>

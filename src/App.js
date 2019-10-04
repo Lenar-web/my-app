@@ -9,7 +9,7 @@ import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/ProfilePage/ProfileContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
-import FriendsContainer from './components/Friends/FriendsContainer';
+import Login from './components/Login/Login';
 
 
 
@@ -18,23 +18,21 @@ let App = (props) => {
     <div>
       <HeaderContainer />
       <div id="page-contents">
-    	<div className="container">
-    		<div className="row">
-
-        
-          <LeftMenu /> 
-          <div className="col-md-9">
-          <Route path='/profile/:userId?' render={ ()=> <ProfileContainer /> }/>
-          {/* <Route path='/news' render={ ()=> <NewsContainer /> }/> */}
-          <Route path='/dialogs' render={ ()=> <DialogsContainer /> } />
-          <Route path='/users' render={ ()=> <UsersContainer /> }/> 	
-          <Route path='/friends' render={ ()=> <FriendsContainer /> }/>
-          <Route path='/images' component={Images}/>
-          <Route path='/videos' component={Videos}/> 
-          </div>
-    		</div>
-    	</div>
+  <div className="container">
+    <div className="row">
+    
+      <LeftMenu /> 
+      <div className="col-md-9">
+      <Route path='/profile/:userId?' render={ ()=> <ProfileContainer /> }/>
+      <Route path='/dialogs' render={ ()=> <DialogsContainer /> } />
+      <Route path='/users' render={ ()=> <UsersContainer /> }/> 	
+      <Route path='/images' component={Images}/>
+      <Route path='/videos' component={Videos}/> 
+      <Route path='/login' render={ ()=> <Login /> }/>
+      </div>
     </div>
+  </div>
+</div>
       <Footer />
     </div>
   );

@@ -1,9 +1,9 @@
 import React from 'react';
 import Preloader from '../../Common/Preloader/Preloader';
 import {NavLink} from 'react-router-dom';
+import ProfileStatus from './ProfileStatus/ProfileStatus';
 
 let ProfileInfo = (props) => {
-  
   if(!props.profile) {
     return(
       <Preloader />
@@ -21,7 +21,7 @@ let ProfileInfo = (props) => {
             <img src={props.profile.photos.large !== null ? props.profile.photos.large : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1P9NIBPbZvN_8V2uZ8cVfm4Rnwwel8_UF_89HT238qUQAOZ1p'  }  alt="user" />
             </a>
             <h3>{props.profile.fullName}</h3>
-            <p className="text-muted">{props.profile.status}</p>
+            <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
           </div>
         </div>
         <div className="col-md-8">
@@ -31,10 +31,10 @@ let ProfileInfo = (props) => {
             <li><a href="timeline-album.html">Альбом</a></li>
             <li><a href="timeline-friends.html">Друзья</a></li>
           </ul>
-          <ul className="follow-me list-inline">
+          {/* <ul className="follow-me list-inline">
             <li>1,299 Подписчиков</li>
-            {/* <li><button className="btn-primary">Add Friend</button></li> */}
-          </ul>
+            <li><button className="btn-primary">Add Friend</button></li>
+          </ul> */}
         </div>
       </div>
 

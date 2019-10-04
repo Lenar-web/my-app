@@ -1,4 +1,5 @@
 import * as axios from 'axios';
+import Login from '../components/Login/LoginContainer';
 
 const instance = axios.create({
   withCredentials: true,
@@ -27,13 +28,22 @@ export const usersAPI = {
     .then(response => {
       return response.data.resultCode
     })
-  },
+  } 
+}
+
+export const profileAPI = {
   getProfile(userId){
     return instance.get(`profile/${userId}`)
     .then(response => {
       return response.data
     })
-  }   
+  },
+  getStatus(userId){
+    return instance.get(`profile/status/${userId}`)
+  },
+  updateStatus(status){
+    return instance.put(`profile/status`, {status: status})
+  }  
 }
 
 export const AuthMeAPI = {
@@ -41,5 +51,8 @@ export const AuthMeAPI = {
     return instance.get('auth/me').then(response => {
       return response.data
     })
+  },
+  login(data) {
+    return instance.post('auth/login', data)
   }
 }
