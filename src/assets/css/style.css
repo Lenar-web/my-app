@@ -894,7 +894,7 @@ ul.online-users li span.online-dot{
   justify-content: space-between;
 }
 .create-post .form-group .form-control {
-  width: 90%;
+  width: 100%;
 }
 
 .create-post .form-group img.profile-photo-md{
@@ -1999,4 +1999,84 @@ ul.contact li i{
   display: block;
   width: 100%;
   height: auto;
+}
+
+.formControl.error textarea,
+.formControl.error input {
+  box-shadow: 0 0 0 2px red !important;
+}
+.error span{
+  color: red;
+  font-weight: bold;
+}
+.rememberme-wrap{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+margin-top: 20px;
+margin-bottom: 10px;
+
+}
+.rememberme-wrap input{
+  display: none;
+}
+.rememberme-wrap label {
+position: relative;
+padding-left: 30px;
+margin-bottom: 0;
+cursor: pointer;
+}
+.rememberme-wrap label::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 1px solid #fff;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  }
+  .rememberme-wrap input[value='true'] + label::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 7px;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+  }
+  .create-post .formControl {
+    width: 90%;
+  }
+.logout-button{
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 15px 15px;
+}
+.logout-button:hover,
+.logout-button:focus{
+color: #27aae1;
+}
+.error-summary {
+  color: red;
+  font-weight: bold;
+  padding: 5px;
+  border:1px solid red;
+  font-size: 16px;
+}
+.login_wrap {
+  height: 700px;
 }

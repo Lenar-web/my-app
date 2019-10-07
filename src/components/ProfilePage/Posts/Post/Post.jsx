@@ -12,8 +12,8 @@ let Post = (props) => {
         <p className="text-muted">2 дня назад</p>
       </div>
       <div className="reaction">
-        <a className="btn text-green"><i className="icon ion-thumbsup"></i>{props.like}</a>
-        <a className="btn text-red"><i className="fa fa-thumbs-down"></i>{props.dislike}</a>
+        <a href="#c" className="btn text-green"><i className="icon ion-thumbsup"></i>{props.like}</a>
+        <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i>{props.dislike}</a>
       </div>
       <div className="line-divider"></div>
       <div className="post-text">

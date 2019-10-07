@@ -1,7 +1,12 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { required, maxLengthCreator} from '../../../../utils/validators/validators';
+import { Textarea } from '../../../Common/FromsControl/FromsControl';
 
-let CreatPost = (props) => {
+let maxLength10 = maxLengthCreator(10);
+
+
+let CreatePost = (props) => {
   return(
     <form onSubmit={props.handleSubmit}>
     <div className="row">
@@ -10,7 +15,7 @@ let CreatPost = (props) => {
         <a href="#c" className="profile-photo-md" >
         <img src="https://sun9-32.userapi.com/c847217/v847217358/12ef68/SBEQOk1q8Eo.jpg" alt="" />
         </a>
-        <Field className="form-control" name="newPostText" component="textarea" type="password" placeholder="Напишите, что у вас нового"/>
+        <Field className="form-control" name="newPostText" component={Textarea} type="password" placeholder={"Напишите, что у вас нового"} validate={[required, maxLength10]}/>
       </div>
     </div>
     <div className="col-md-12 col-sm-12">
@@ -29,6 +34,6 @@ let CreatPost = (props) => {
   )
 }
 
-const CreatPostReduxForm = reduxForm({form: 'post'})(CreatPost)
+const CreatePostReduxForm = reduxForm({form: 'post'})(CreatePost)
 
-export default CreatPostReduxForm
+export default CreatePostReduxForm

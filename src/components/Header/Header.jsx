@@ -21,9 +21,11 @@ let Header = (props) => {
 
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul className="nav navbar-nav navbar-right main-menu">
-              {props.isAuth ? <li className="dropdown"><NavLink to="/profile">{props.login}</NavLink></li> : <li className="dropdown"><NavLink to="/login">Вход</NavLink></li>}
-            </ul>
+            
+              {props.isAuth 
+              ? <ul className="nav navbar-nav navbar-right main-menu"><li className="dropdown"><NavLink to="/profile">{props.login}</NavLink></li><li className="dropdown"><button className="logout-button" onClick={props.logout}>Выход</button></li></ul>
+              : <ul className="nav navbar-nav navbar-right main-menu"><li className="dropdown"><NavLink to="/login">Вход</NavLink></li></ul>}
+            
             <form className="navbar-form navbar-right hidden-sm">
               <div className="form-group">
                 <i className="icon ion-android-search"></i>

@@ -3,26 +3,28 @@ import LoginReduxForm from './Form';
 import {connect} from 'react-redux';
 import {compose} from 'redux';
 import {login} from '../../../redux/auth-reducer';
+import {Redirect} from 'react-router-dom';
 
-class FormContainer extends React.Component {
-  componentDidMount() {
+let FormContainer = (props) => {
 
-  }
 
   
-  onSubmit = (formData) => {
-    this.props.login(formData)
+  let onSubmit = (formData) => {
+    props.login(formData)
   }
-  render() {
-  return (
-    <LoginReduxForm onSubmit={this.onSubmit} {...this.props}/>
-  )
+if(props.isAuth){
+  return <Redirect to={"/profile"} />
 }
+  return (
+    <LoginReduxForm onSubmit={onSubmit} {...props}/>
+  )
+
 }
 
 let mapStateToProps = (state) => ({
   profile: state.profilePage.profile,
-  status: state.profilePage.status
+  status: state.profilePage.status,
+  isAuth: state.auth.isAuth
  })
 
  export default compose(

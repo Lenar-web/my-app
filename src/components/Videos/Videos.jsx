@@ -15,8 +15,8 @@ return (
         </div>
         <div className="media-info">
           <div className="reaction">
-            <a className="btn text-green"><i className="fa fa-thumbs-up"></i> 46</a>
-            <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 11</a>
+            <a href="#c" className="btn text-green"><i className="fa fa-thumbs-up"></i> 46</a>
+            <a href="#c"className="btn text-red"><i className="fa fa-thumbs-down"></i> 11</a>
           </div>
           <div className="user-info">
             <img src="images/users/user-10.jpg" alt="" className="profile-photo-sm pull-left" />
@@ -43,8 +43,8 @@ return (
                       <p className="text-muted">Published a photo about 3 mins ago</p>
                     </div>
                     <div className="reaction">
-                      <a className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
-                      <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
+                      <a href="#c" className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
+                      <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
                     </div>
                     <div className="line-divider"></div>
                     <div className="post-text">
@@ -81,8 +81,8 @@ return (
         </div>
         <div className="media-info">
           <div className="reaction">
-            <a className="btn text-green"><i className="fa fa-thumbs-up"></i> 30</a>
-            <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 7</a>
+            <a href="#c" className="btn text-green"><i className="fa fa-thumbs-up"></i> 30</a>
+            <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 7</a>
           </div>
           <div className="user-info">
             <img src="images/users/user-4.jpg" alt="" className="profile-photo-sm pull-left" />
@@ -109,8 +109,8 @@ return (
                       <p className="text-muted">Published a photo about 3 mins ago</p>
                     </div>
                     <div className="reaction">
-                      <a className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
-                      <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
+                      <a href="#c" className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
+                      <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
                     </div>
                     <div className="line-divider"></div>
                     <div className="post-text">
@@ -147,8 +147,8 @@ return (
         </div>
         <div className="media-info">
           <div className="reaction">
-            <a className="btn text-green"><i className="fa fa-thumbs-up"></i> 233</a>
-            <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 30</a>
+            <a href="#c" className="btn text-green"><i className="fa fa-thumbs-up"></i> 233</a>
+            <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 30</a>
           </div>
           <div className="user-info">
             <img src="images/users/user-9.jpg" alt="" className="profile-photo-sm pull-left" />
@@ -175,8 +175,8 @@ return (
                       <p className="text-muted">Published a photo about 3 mins ago</p>
                     </div>
                     <div className="reaction">
-                      <a className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
-                      <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
+                      <a href="#c" className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
+                      <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
                     </div>
                     <div className="line-divider"></div>
                     <div className="post-text">
@@ -213,8 +213,8 @@ return (
         </div>
         <div className="media-info">
           <div className="reaction">
-            <a className="btn text-green"><i className="fa fa-thumbs-up"></i> 27</a>
-            <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
+            <a href="#c" className="btn text-green"><i className="fa fa-thumbs-up"></i> 27</a>
+            <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
           </div>
           <div className="user-info">
             <img src="images/users/user-2.jpg" alt="" className="profile-photo-sm pull-left" />
@@ -241,8 +241,8 @@ return (
                       <p className="text-muted">Published a photo about 3 mins ago</p>
                     </div>
                     <div className="reaction">
-                      <a className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
-                      <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
+                      <a href="#c" className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
+                      <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
                     </div>
                     <div className="line-divider"></div>
                     <div className="post-text">
@@ -279,8 +279,8 @@ return (
         </div>
         <div className="media-info">
           <div className="reaction">
-            <a className="btn text-green"><i className="fa fa-thumbs-up"></i> 34</a>
-            <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 2</a>
+            <a href="#c" className="btn text-green"><i className="fa fa-thumbs-up"></i> 34</a>
+            <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 2</a>
           </div>
           <div className="user-info">
             <img src="images/users/user-3.jpg" alt="" className="profile-photo-sm pull-left" />
@@ -307,8 +307,8 @@ return (
                       <p className="text-muted">Published a photo about 3 mins ago</p>
                     </div>
                     <div className="reaction">
-                      <a className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
-                      <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
+                      <a href="#c" className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
+                      <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
                     </div>
                     <div className="line-divider"></div>
                     <div className="post-text">
@@ -345,8 +345,8 @@ return (
         </div>
         <div className="media-info">
           <div className="reaction">
-            <a className="btn text-green"><i className="fa fa-thumbs-up"></i> 71</a>
-            <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
+            <a href="#c" className="btn text-green"><i className="fa fa-thumbs-up"></i> 71</a>
+            <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
           </div>
           <div className="user-info">
             <img src="images/users/user-4.jpg" alt="" className="profile-photo-sm pull-left" />
@@ -373,8 +373,8 @@ return (
                       <p className="text-muted">Published a photo about 3 mins ago</p>
                     </div>
                     <div className="reaction">
-                      <a className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
-                      <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
+                      <a href="#c" className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
+                      <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
                     </div>
                     <div className="line-divider"></div>
                     <div className="post-text">
@@ -411,8 +411,8 @@ return (
         </div>
         <div className="media-info">
           <div className="reaction">
-            <a className="btn text-green"><i className="fa fa-thumbs-up"></i> 32</a>
-            <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 2</a>
+            <a href="#c" className="btn text-green"><i className="fa fa-thumbs-up"></i> 32</a>
+            <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 2</a>
           </div>
           <div className="user-info">
             <img src="images/users/user-5.jpg" alt="" className="profile-photo-sm pull-left" />
@@ -439,8 +439,8 @@ return (
                       <p className="text-muted">Published a photo about 3 mins ago</p>
                     </div>
                     <div className="reaction">
-                      <a className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
-                      <a className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
+                      <a href="#c" className="btn text-green"><i className="icon ion-thumbsup"></i> 13</a>
+                      <a href="#c" className="btn text-red"><i className="fa fa-thumbs-down"></i> 0</a>
                     </div>
                     <div className="line-divider"></div>
                     <div className="post-text">

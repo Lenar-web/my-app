@@ -10,24 +10,35 @@ import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/ProfilePage/ProfileContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
 import Login from './components/Login/Login';
+import {connect} from 'react-redux';
+import {initializeApp} from './redux/app-reducer'
+import Preloader from './components/Common/Preloader/Preloader';
 
 
+class App extends React.Component {
 
-let App = (props) => {
+  componentDidMount() {
+    this.props.initializeApp()
+  }
+
+  render() {
+    if(!this.props.initialized){
+      return <Preloader />
+    }
   return (
     <div>
       <HeaderContainer />
       <div id="page-contents">
   <div className="container">
     <div className="row">
-    
-      <LeftMenu /> 
+    {this.props.isAuth && <LeftMenu />}
+       
       <div className="col-md-9">
       <Route path='/profile/:userId?' render={ ()=> <ProfileContainer /> }/>
       <Route path='/dialogs' render={ ()=> <DialogsContainer /> } />
       <Route path='/users' render={ ()=> <UsersContainer /> }/> 	
-      <Route path='/images' component={Images}/>
-      <Route path='/videos' component={Videos}/> 
+      {/* <Route path='/images' component={Images}/>
+      <Route path='/videos' component={Videos}/>  */}
       <Route path='/login' render={ ()=> <Login /> }/>
       </div>
     </div>
@@ -36,6 +47,11 @@ let App = (props) => {
       <Footer />
     </div>
   );
+  }
 }
 
-export default App;
+let mapStateToProps =(state) => ({
+  initialized: state.app.initialized,
+  isAuth: state.auth.isAuth
+}) 
+export default connect(mapStateToProps, {initializeApp})(App);

@@ -6,8 +6,8 @@ import MessageReduxForm from './MessageForm';
 
 const Dialogs = (props) => {
 
-let messages = props.dialogsPage.messagesData.map( m => <Message position={m.position} id={m.id} name={m.name} date={m.date} message={m.message}  />)
-let dialogs = props.dialogsPage.dialogsData.map( d => <DialogsItem id={d.id} name={d.name} time={d.time} message={d.message}/>)
+let messages = props.dialogsPage.messagesData.map( m => <Message position={m.position} key={m.id} id={m.id} name={m.name} date={m.date} message={m.message}  />)
+let dialogs = props.dialogsPage.dialogsData.map( d => <DialogsItem id={d.id} key={d.id} name={d.name} time={d.time} message={d.message}/>)
 
 let addMessage = (value) => {
   props.onAddMessage(value.newMessageText)
