@@ -11,7 +11,7 @@ let Profile = (props) => {
       </NavLink>
       <h5><NavLink to="/profile" className="text-white">{props.profile.fullName || 'no status'}</NavLink></h5>
         </div>
-       : <h3 className="dropdown text-white"><NavLink to="/login">Вход</NavLink></h3>
+        : <h3>Вход</h3>
       }
       
     </div>

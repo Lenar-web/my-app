@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {compose} from 'redux';
 
@@ -8,8 +8,11 @@ import {connect} from 'react-redux';
 import Profile from './Profile';
 
 let ProfileContainer = (props) => {
- 
-   props.getMyProfile(props.id)
+
+  useEffect( () => {
+    getMyProfile(props.id)
+  }, [props.id])
+   
 return <Profile {...props} profile={props.profile}/>
 }
 

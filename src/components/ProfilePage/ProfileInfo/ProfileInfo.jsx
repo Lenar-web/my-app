@@ -4,7 +4,8 @@ import {NavLink} from 'react-router-dom';
 import ProfileStatus from './ProfileStatus/ProfileStatus';
 import ProfileStatusComponent from './ProfileStatus/ProfileStatusComponent';
 
-let ProfileInfo = (props) => {
+let ProfileInfo = React.memo((props) => {
+  console.log("ProfileInfo")
   if(!props.profile) {
     return(
       <Preloader />
@@ -22,7 +23,9 @@ let ProfileInfo = (props) => {
             <img src={props.profile.photos.large !== null ? props.profile.photos.large : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1P9NIBPbZvN_8V2uZ8cVfm4Rnwwel8_UF_89HT238qUQAOZ1p'  }  alt="user" />
             </a>
             <h3>{props.profile.fullName}</h3>
-            <ProfileStatusComponent status={props.status} updateStatus={props.updateStatus}/>
+            {props.profile.userId === props.AuthUserId
+            ? <ProfileStatusComponent status={props.status} updateStatus={props.updateStatus}/>
+            : <p className="text-muted">{props.status || 'No status'}</p>}
           </div>
         </div>
         <div className="col-md-8">
@@ -63,5 +66,5 @@ let ProfileInfo = (props) => {
 
   </div>
   )
-}
+})
 export default ProfileInfo
