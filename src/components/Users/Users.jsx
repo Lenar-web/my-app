@@ -4,7 +4,6 @@ import {NavLink} from 'react-router-dom';
 
 
 const Users = (props) => {
-
   let pageCount = Math.ceil(props.totalUserCount / props.pageSize);
   
   let pages = []
@@ -13,7 +12,7 @@ const Users = (props) => {
   }
   let totalPage = pages.map(p => {
     return (
-      <span onClick={ () => { props.onPageChanged(p) } } className={props.currentPage === p && "currentPage"}>{p}</span>
+      <span key={p} onClick={ () => { props.onPageChanged(p) } } className={props.currentPage === p ? "currentPage" : ''}>{p}</span>
       )
   } )
 
@@ -21,9 +20,8 @@ return <div className="people-nearby">
   <div className="pagination">
     {totalPage}
   </div>
-  
   {props.fetching ? <Preloader /> : null}
-    {!props.fetching && props.users.map(u =><div className="nearby-user">
+    {!props.fetching && props.users.map(u => <div className="nearby-user" key={u.id}>
       <div className="row">
         <div className="col-md-2 col-sm-2">
           <NavLink to={"/profile/" + u.id}className="profile-photo-lg">
@@ -41,8 +39,7 @@ return <div className="people-nearby">
             onClick={()=>{props.unfollow(u.id)}} 
             className="btn btn-primary pull-right">Удалить из друзей</button> 
             : <button disabled={props.followingInProgress.some(id => id === u.id)} 
-            onClick={()=>{props.follow(u.id)
-              debugger}} 
+            onClick={()=>{props.follow(u.id)}} 
             className="btn btn-primary pull-right">Добавить в друзья</button>}
           
         </div>

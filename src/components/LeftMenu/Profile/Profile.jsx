@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 let Profile = (props) => {
+
   return (
     <div className="profile-card">
       {props.profile !== null && props.isAuth === true

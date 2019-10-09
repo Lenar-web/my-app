@@ -11,20 +11,25 @@ import Login from './components/Login/Login';
 import {connect} from 'react-redux';
 import {initializeApp} from './redux/app-reducer'
 import Preloader from './components/Common/Preloader/Preloader';
-
+import {Redirect} from 'react-router-dom';
 
 class App extends React.Component {
 
   componentDidMount() {
     this.props.initializeApp()
   }
+  
 
   render() {
     if(!this.props.initialized){
       return <Preloader />
     }
+ 
   return (
     <div>
+      {!this.props.isAuth &&
+    <Redirect  to="/login"/>
+  }
       <HeaderContainer />
       <div id="page-contents">
   <div className="container">

@@ -2080,3 +2080,6 @@ color: #27aae1;
 .login_wrap {
   height: 700px;
 }
+.nearby-user .btn-primary:disabled {
+background-color: gray;
+}

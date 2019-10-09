@@ -4,7 +4,6 @@ import { Input } from '../../Common/FromsControl/FromsControl';
 import { required } from '../../../utils/validators/validators';
 
 let Form = (props) => {
-  debugger
   return <form onSubmit={props.handleSubmit}>
   <fieldset className="form-group">
 

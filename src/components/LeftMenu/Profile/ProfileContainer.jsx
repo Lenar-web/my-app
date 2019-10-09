@@ -7,11 +7,14 @@ import {getAuth, getMyProfile} from '../../../redux/auth-reducer'
 import {connect} from 'react-redux';
 import Profile from './Profile';
 
+
+
 let ProfileContainer = (props) => {
 
-  useEffect( () => {
-    getMyProfile(props.id)
+  useEffect(() => {
+    props.getMyProfile(props.id)
   }, [props.id])
+   
    
 return <Profile {...props} profile={props.profile}/>
 }
