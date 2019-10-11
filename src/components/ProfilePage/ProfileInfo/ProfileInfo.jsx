@@ -5,7 +5,6 @@ import ProfileStatus from './ProfileStatus/ProfileStatus';
 import ProfileStatusComponent from './ProfileStatus/ProfileStatusComponent';
 
 let ProfileInfo = React.memo((props) => {
-  console.log("ProfileInfo")
   if (!props.profile) {
     return (<Preloader/>)
   }

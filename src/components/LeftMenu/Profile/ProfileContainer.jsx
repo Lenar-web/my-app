@@ -3,7 +3,8 @@ import React, {useEffect} from 'react';
 import {compose} from 'redux';
 
 
-import {getAuth, getMyProfile} from '../../../redux/auth-reducer'
+import {getAuth} from '../../../redux/auth-reducer'
+import {getMyProfile} from '../../../redux/profile-reducer'
 import {connect} from 'react-redux';
 import Profile from './Profile';
 
@@ -24,7 +25,7 @@ let mapStateToProps = (state) => ({
   isAuth: state.auth.isAuth,
   login: state.auth.login,
   id: state.auth.id,
-  profile: state.auth.myProfile
+  profile: state.profilePage.myProfile
 })
 
 

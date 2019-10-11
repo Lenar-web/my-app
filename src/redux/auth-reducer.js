@@ -1,15 +1,12 @@
 import {AuthMeAPI, profileAPI} from "../api/api";
 import {stopSubmit} from 'redux-form';
-import { async } from "q";
 
 const SET_USER_DATA = "SET-USER-DATA";
-const SET_MY_PROFILE = "SET-MY-PROFILE";
 let initialState = {
   id: null,
   email: null,
   login: null,
   isAuth: false,
-  myProfile: null
 }
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -17,11 +14,6 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         ...action.data
-      };
-    case SET_MY_PROFILE:
-      return {
-        ...state,
-        myProfile: action.profile
       };
     default:
       return state;
@@ -37,7 +29,6 @@ export const setAuthUserData = (id, email, login, isAuth) => ({
     isAuth
   }
 });
-export const setMyProfile = (profile) => ({type: SET_MY_PROFILE, profile});
 
 export const getAuth = () =>  async (dispatch) => {
     let data = await AuthMeAPI.me()
@@ -45,11 +36,6 @@ export const getAuth = () =>  async (dispatch) => {
           let {id, email, login} = data.data;
           dispatch(setAuthUserData(id, email, login, true));
         }
-}
-
-export const getMyProfile = (userId) => async (dispatch) => {
-    let data = await profileAPI.getProfile(userId)
-        dispatch(setMyProfile(data));
 }
 
 export const login = (data) => async (dispatch) => {

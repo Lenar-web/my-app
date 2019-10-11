@@ -1,12 +1,15 @@
 import { profileAPI } from "../api/api";
 import { async } from "q";
+import { nullLiteral } from "@babel/types";
 
 const ADD_POST = "ADD-POST";
 const SET_USER_PROFILE = "SET-USER-PROFILE";
+const SET_MY_PROFILE = "SET-MYPROFILE";
 const SET_STATUS = "SET-STATUS";
 
 let initialState = {
   profile: null,
+  myProfile: null,
   status: "",
   postData: [
     {author: "Ленар Евстафьев", text: "Всем привет", like: 10, dislike: 0, id: 1},
@@ -35,6 +38,11 @@ const profileReducer = (state = initialState, action) => {
       ...state,
       profile: action.profile
     };
+    case SET_MY_PROFILE: 
+    return {
+      ...state,
+      myProfile: action.myProfile
+    };
     case SET_STATUS: 
     return {
       ...state,
@@ -48,11 +56,18 @@ const profileReducer = (state = initialState, action) => {
 export const addPost = (newPostText) => ({type: ADD_POST,newPostText});
 export const setUsersProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const setStatus = (status) => ({type: SET_STATUS, status});
+export const setMyProfile = (myProfile) => ({type: SET_MY_PROFILE, myProfile});
 
+const ProfileRequest = async (userId,dispatch, actionCreator) => {
+  let data = await profileAPI.getProfile(userId);
+  dispatch(actionCreator(data));
+}
 export const getProfile = (userId) => async (dispatch) => {
-    let data = await profileAPI.getProfile(userId);
-      dispatch(setUsersProfile(data));
+  ProfileRequest(userId, dispatch, setUsersProfile);
   }
+export const getMyProfile = (userId) => async (dispatch) => {
+  ProfileRequest(userId, dispatch, setMyProfile);
+}
 
   export const getStatus = (userId) => async (dispatch) => {
     let response = await profileAPI.getStatus(userId)

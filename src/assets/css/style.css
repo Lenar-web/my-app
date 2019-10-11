@@ -1988,7 +1988,6 @@ ul.contact li i{
   font-weight: bold;
   background-color: #27aae1;
   color: #fff;
-
 }
 .preloader {
   width: 100px;
@@ -2082,4 +2081,53 @@ color: #27aae1;
 }
 .nearby-user .btn-primary:disabled {
 background-color: gray;
+}
+.arrow{
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border: none;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: normal;
+
+}
+.arrow__right::after{
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #6d6e71;
+  border-top: 2px solid #6d6e71;
+  transform: rotate(45deg);
+  margin-left: 3px;
+}
+.arrow__left::before{
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #6d6e71;
+  border-top: 2px solid #6d6e71;
+  transform: rotate(-45deg);
+  margin-right: 3px;
+}
+.arrow:hover {
+  font-weight: bold;
+  background-color: #27aae1;
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: normal;
+}
+.arrow:hover::after,
+.arrow:hover::before{
+  border-color: #fff;
 }
