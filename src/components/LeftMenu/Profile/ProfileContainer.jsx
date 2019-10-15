@@ -11,12 +11,11 @@ import Profile from './Profile';
 
 
 let ProfileContainer = (props) => {
-
+  console.log("ProfileContainer ")
   useEffect(() => {
     props.getMyProfile(props.id)
   }, [props.id])
-   
-   
+  
 return <Profile {...props} profile={props.profile}/>
 }
 
@@ -25,7 +24,8 @@ let mapStateToProps = (state) => ({
   isAuth: state.auth.isAuth,
   login: state.auth.login,
   id: state.auth.id,
-  profile: state.profilePage.myProfile
+  profile: state.profilePage.myProfile,
+
 })
 
 

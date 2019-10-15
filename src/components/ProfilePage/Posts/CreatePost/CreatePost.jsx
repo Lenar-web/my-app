@@ -1,9 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { required, maxLengthCreator} from '../../../../utils/validators/validators';
+import { required } from '../../../../utils/validators/validators';
 import { Textarea } from '../../../Common/FromsControl/FromsControl';
-
-let maxLength10 = maxLengthCreator(10);
 
 
 let CreatePost = (props) => {
@@ -15,7 +13,7 @@ let CreatePost = (props) => {
         <a href="#c" className="profile-photo-md" >
         <img src="https://sun9-32.userapi.com/c847217/v847217358/12ef68/SBEQOk1q8Eo.jpg" alt="" />
         </a>
-        <Field className="form-control" name="newPostText" component={Textarea} type="password" placeholder={"Напишите, что у вас нового"} />
+        <Field className="form-control" name="newPostText" component={Textarea} validate={[required]} type="password" placeholder={"Напишите, что у вас нового"} />
       </div>
     </div>
     <div className="col-md-12 col-sm-12">

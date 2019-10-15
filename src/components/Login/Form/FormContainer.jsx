@@ -16,7 +16,7 @@ if(props.isAuth){
   return <Redirect to={"/profile"} />
 }
   return (
-    <LoginReduxForm onSubmit={onSubmit} {...props}/>
+    <LoginReduxForm onSubmit={onSubmit} {...props} />
   )
 
 }
