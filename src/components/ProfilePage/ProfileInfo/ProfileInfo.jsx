@@ -1,7 +1,5 @@
 import React from 'react';
 import Preloader from '../../Common/Preloader/Preloader';
-import {NavLink} from 'react-router-dom';
-import ProfileStatus from './ProfileStatus/ProfileStatus';
 import ProfileStatusComponent from './ProfileStatus/ProfileStatusComponent';
 
 let ProfileInfo = React.memo((props) => {
@@ -24,7 +22,7 @@ let ProfileInfo = React.memo((props) => {
                   alt="user"/>
               </a>
               <h3>{props.profile.fullName}</h3>
-              {props.profile.userId === props.AuthUserId
+              {props.isOwner
                 ? <ProfileStatusComponent
                     status={props.status}
                     updateStatus={props.updateStatus}/>
@@ -37,7 +35,7 @@ let ProfileInfo = React.memo((props) => {
                 <a href="timeline.html">Стена</a>
               </li>
               <li>
-                <NavLink to={'/profile/' + props.profile.userId + '/about'}>Обо мне</NavLink>
+                <a href="#c">Обо мне</a>
               </li>
               <li>
                 <a href="timeline-album.html">Альбом</a>
@@ -83,7 +81,7 @@ let ProfileInfo = React.memo((props) => {
           {/* <button className="btn-primary">Add Friend</button> */}
         </div>
       </div>
-
+      <div></div>
     </div>
   )
 })

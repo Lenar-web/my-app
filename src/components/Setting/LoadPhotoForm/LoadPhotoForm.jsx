@@ -1,6 +1,7 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form';
-import { required } from '../../../utils/validators/validators';
+
+
 const adaptFileEventToValue = delegate => e => delegate(e.target.files[0]);
 
 const FileInput = ({
@@ -8,7 +9,7 @@ const FileInput = ({
   meta: omitMeta, 
   ...props 
 }) => {
-  debugger
+
   return (
     <input
       onChange={adaptFileEventToValue(onChange)}
@@ -25,10 +26,9 @@ const { handleSubmit } = props;
   return (
     <form onSubmit={handleSubmit}>
     <div>
-      <label>Attachment</label>
       <Field name="attachment" component={FileInput} type="file" />
     </div>
-    <button type="submit">Submit</button>
+    <button className="btn btn-primary" type="submit">Submit</button>
   </form>
 
   )

@@ -12,10 +12,16 @@ let Form = (props) => {
   <fieldset className="form-group">
     <Field className="form-control" name="password" validate={[required]} component={Input} type="password" placeholder="Ваш пароль"/>
   </fieldset>
-  <div class="rememberme-wrap">
+  <div className="rememberme-wrap">
   <Field id="rememberme" name="rememberMe" component={'input'} type="checkbox"/>
   <label htmlFor="rememberme">Запомнить меня</label>
   </div>
+  {props.captchaUrl &&
+  <div>
+    <img className="captcha-image" src={props.captchaUrl} alt="Capthca"/>
+    <Field className="form-control" name="captcha" component={Input} validate={[required]} type="text" placeholder="Код с картинки"/>
+  </div>
+  }
   {props.error &&
   <div className="error-summary">{props.error}</div>
 }

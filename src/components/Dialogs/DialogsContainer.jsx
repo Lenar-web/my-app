@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import Dialogs from './Dialogs';
 import { addMessageAC} from '../../redux/dialog-reducer';
-import { widthAuthRedirect } from '../../hoc/withAuthRedirect';
 import {compose} from 'redux';
 
 

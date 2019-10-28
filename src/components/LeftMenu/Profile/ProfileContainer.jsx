@@ -11,11 +11,11 @@ import Profile from './Profile';
 
 
 let ProfileContainer = (props) => {
-  console.log("ProfileContainer ")
+
   useEffect(() => {
     props.getMyProfile(props.id)
   }, [props.id])
-  
+
 return <Profile {...props} profile={props.profile}/>
 }
 

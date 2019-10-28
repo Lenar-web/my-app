@@ -2131,3 +2131,13 @@ background-color: gray;
 .arrow:hover::before{
   border-color: #fff;
 }
+.form-success {
+  color: Green;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+}
+.captcha-image {
+  width: 150px;
+  margin-bottom: 15px;
+}

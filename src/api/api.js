@@ -43,6 +43,9 @@ export const profileAPI = {
   updateStatus(status){
     return instance.put(`profile/status`, {status: status})
   },
+  saveProfile(profile){
+    return instance.put(`profile`, profile)
+  },
   updatePhoto(photoFile) {
     var formData = new FormData();
     formData.append("image", photoFile);
@@ -62,6 +65,12 @@ export const AuthMeAPI = {
   },
   login(data) {
     return instance.post('auth/login', data)
+  },
+  captcha() {
+    return instance.get('security/get-captcha-url')
+    .then(response => {
+      return response
+    })
   },
   logout() {
     return instance.delete('auth/login')

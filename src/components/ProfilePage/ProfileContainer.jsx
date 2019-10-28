@@ -5,7 +5,6 @@ import {getProfile, getStatus, updateStatus} from '../../redux/profile-reducer';
 import{withRouter} from 'react-router-dom';
 import { widthAuthRedirect } from '../../hoc/withAuthRedirect';
 import {compose} from 'redux';
-import {Redirect} from 'react-router-dom';
 
 class ProfileContainer extends React.Component {
 
@@ -22,13 +21,13 @@ class ProfileContainer extends React.Component {
     this.refreshProfile()
   }
   componentDidUpdate(prevProps) {
-    if(this.props.match.params.userId != prevProps.match.params.userId) {
+    if(this.props.match.params.userId !== prevProps.match.params.userId) {
       this.refreshProfile()
    }
   }
   render() {
    return (
-  <Profile {...this.props} profile={this.props.profile} status={this.props.status} updateStatus={this.props.updateStatus}/>
+  <Profile {...this.props} profile={this.props.profile} status={this.props.status} updateStatus={this.props.updateStatus} isOwner={!this.props.match.params.userId}/>
   )
 
 }
@@ -38,7 +37,7 @@ let mapStateToProps = (state) => ({
   profile: state.profilePage.profile,
   status: state.profilePage.status,
   AuthUserId: state.auth.id,
-  isAuth: state.auth.isAuth
+  isAuth: state.auth.isAuth,
  })
 
  export default compose(
